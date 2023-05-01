@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculatrice</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="calculatrice.css">
+    </head>
+    <body>
+        <section>
+            <div id="p1">
+            </div>
+            <div id="p2">
+            </div>
+            <div id="p3">
+                <table>
+                    <tr>
+                        <td onclick="calcul.ajout(7)">7</td>
+                        <td onclick="calcul.ajout(8)">8</td>
+                        <td onclick="calcul.ajout(9)">9</td>
+                        <td onclick="calcul.ajout('/')">/</td>
+                        <td></td>
+                        <td onclick="calcul.ajout('C')">C</td>
+                    </tr>
+                    <tr>
+                        <td onclick="calcul.ajout(4)">4</td>
+                        <td onclick="calcul.ajout(5)">5</td>
+                        <td onclick="calcul.ajout(6)">6</td>
+                        <td onclick="calcul.ajout('×')">x</td>
+                        <td onclick="calcul.ajout('(')">(</td>
+                        <td onclick="calcul.ajout(')')">)</td>
+                    </tr>
+                    <tr>
+                        <td onclick="calcul.ajout(1)">1</td>
+                        <td onclick="calcul.ajout(2)">2</td>
+                        <td onclick="calcul.ajout(3)">3</td>
+                        <td onclick="calcul.ajout('-')">-</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td onclick="calcul.ajout(0)">0</td>
+                        <td onclick="calcul.ajout('.')">.</td>
+                        <td></td>
+                        <td onclick="calcul.ajout('+')">+</td>
+                        <td colspan="2" onclick="calcul.ajout('=')">=</td>
+                    </tr>
+                </table>
+            </div>
+        </section>      
+     </body>
+ 
+    <script src="calculatrice.js"></script>
+</html>

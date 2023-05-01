@@ -1,0 +1,64 @@
+section{
+    position : absolute;
+    margin-left: 25vw;
+    text-align : center;
+    height: 90vh;
+    width : 50vw;
+    border-radius : 10px;
+    border : 1.5px solid black;
+}
+/*scrollbar*/
+#p1::-webkit-scrollbar,#p2::-webkit-scrollbar {
+  width: 16px;
+}#p1::-webkit-scrollbar-thumb,#p2::-webkit-scrollbar-thumb {
+  background: rgb(118, 207, 188);
+  border-radius: 8px;
+}#p1::-webkit-scrollbar-corner,#p2::-webkit-scrollbar-corner {
+  opacity:1;
+}   
+
+#p1{
+    background-color:rgb(183, 248, 234);
+    height: 15%;
+    border-radius: 10px 10px 0px 0px;
+    
+    font-size: 3vw;
+    overflow:scroll;
+    white-space:nowrap;
+}
+#p2{
+    background-color:rgb(255, 255, 255);
+    height: 35%;
+    font-size: 7vw;
+    overflow:scroll;
+    white-space:nowrap;
+}
+#p3{
+    position : relative;
+    background-color:rgb(0, 126, 113);
+    height : 50% ;
+    border-radius:0px 0px 10px 10px;
+}
+#p3 table{
+    /*mettre au milieu de l'élement parent DEBUT*/
+    position :absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50% , -50%); 
+    /*mettre au milieu de l'élement parent FIN*/
+    height : 100%;
+    width : 100%;
+}
+#p3 td{   
+    background-color:rgb(0, 185, 165);
+    height : 10%;
+    width : 10px;
+    border-radius : 10px;
+    border : 1px solid black;
+}
+#p3 td:hover{
+    background-color:rgb(1, 110, 99);
+}
+#p3 td:active{
+    background-color:rgb(0, 77, 69);
+}
