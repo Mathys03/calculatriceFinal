@@ -8,7 +8,6 @@ export class ErrorsController {
 
     @Get()
     getErrors(){
-        console.log('get all errors');
         return this.errorsService.getErrors();
     }
     @Post()

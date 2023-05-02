@@ -8,7 +8,6 @@ export class SuccessController {
 
     @Get()
     getSuccess(){
-        console.log('get all success');
         return this.successService.getSuccess();
     }
     @Post()

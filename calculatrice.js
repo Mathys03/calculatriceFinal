@@ -25,7 +25,10 @@ class BaseCalculator{
             var xhttp = new XMLHttpRequest();
             xhttp.open("POST", url, true);
             xhttp.setRequestHeader("Content-type", "application/json");
-            var tpmp = xhttp.send(JSON.stringify(dataraw));
+            xhttp.send(JSON.stringify(dataraw));
+            xhttp.onload = function() {
+                console.log(this.responseText);
+                };
             ///
             ecran.innerHTML=eval(this.chaine)
             header.innerHTML += this.chaine + " = " + eval(this.chaine) +"<br>"

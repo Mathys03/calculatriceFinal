@@ -10,8 +10,7 @@ export class ErrorsService {
 
     async getErrors(){
         const res = await this.errorsRepository.find();
-        console.log('res is : ',res);
-        return res;
+        return [res.length,res[res.length-1].created_at];
     } 
 
     async createNewErrors(created_at:Date):Promise<Errors>{
