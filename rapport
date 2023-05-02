@@ -1,0 +1,4 @@
+tout est normalement fonctionnel hormi le retour serveurs vers calculatrice du "rapport global" que je n'ai malheureusement pas réussi à finir.
+Les données sont bien renvoyés par le serveur mais le scripte "xhttp.onload = function() {console.log(this.responseText);};" n'attend pas
+assez longtemps que les données lui soient envoyés et impossible de retarder son execution avec un setTimeout(), malgré des recherches je n'ai pas trouvé comment régler ce problème.
+Le bon fonctionnement jusqu'à cette étape est néanmoins observable grâce au console.log() avant le return du "rapport global" côté serveur.
