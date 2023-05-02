@@ -16,20 +16,22 @@ class BaseCalculator{
     }
     printToScreen(){
         this.timeTakenMsEnd=Date.now();
-        console.log(this.timeTakenMsEnd-this.timeTakenMsStart)
-        console.log(this.timeTakenMsEnd)
-        ///manip vers serveur
-        let url = 'http://localhost:3000'
-        let dataraw = {"calcul": this.chaine,"timeTakenMs":this.timeTakenMsEnd-this.timeTakenMsStart};
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("POST", url, true);
-        xhttp.setRequestHeader("Content-type", "application/json");
-        var tpmp = xhttp.send(JSON.stringify(dataraw));
-        ///
-        ecran.innerHTML=eval(this.chaine)
-        header.innerHTML += this.chaine + " = " + eval(this.chaine) +"<br>"
-        this.lastChaine = this.chaine
-        this.chaine = null
+        if(this.timeTakenMsEnd!=this.timeTakenMsStart){
+            console.log(this.timeTakenMsEnd-this.timeTakenMsStart)
+            console.log(this.timeTakenMsStart)
+            ///manip vers serveur
+            let url = 'http://localhost:3000'
+            let dataraw = {"calcul": this.chaine,"timeTakenMs":this.timeTakenMsEnd-this.timeTakenMsStart};
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("POST", url, true);
+            xhttp.setRequestHeader("Content-type", "application/json");
+            var tpmp = xhttp.send(JSON.stringify(dataraw));
+            ///
+            ecran.innerHTML=eval(this.chaine)
+            header.innerHTML += this.chaine + " = " + eval(this.chaine) +"<br>"
+            this.lastChaine = this.chaine
+            this.chaine = null
+        }
     }
     addToChaine(elem){
         if(elem == '×')elem='*'
